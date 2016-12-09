@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="http://localhost:8080/guanxing_medical/static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="dist/css/im-pagination.min.css">
+</head>
+<body ng-controller="mainCtrl">
+
+	<ul>
+		<li ng-repeat="item in list track by $index">{{item.name}}</li>
+	</ul>
+	
+	<div style="margin-left: 40px;">
+		<im-pagination conf="pageInfo" params="params" get-data="getData2()"></im-pagination>
+	</div>
+
+	<script src="http://cdn.bootcss.com/angular.js/1.5.3/angular.min.js"></script>
+	
+	<script type="text/javascript" src="src/js/im.pagination.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	
+</body>
+</html>
